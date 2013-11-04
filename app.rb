@@ -10,10 +10,8 @@ enable :sessions
 
 class User
   include DataMapper::Resource
-  property :name,       String, :key => true
-  validates_length_of :name, min: 1
-  property :password,   BCryptHash
-  validates_length_of :password, min: 6
+  property :name,       String, :key => true, :required => true
+  property :password,   BCryptHash,:required => true
   property :created_at, DateTime
 end
 
