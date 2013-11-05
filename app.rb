@@ -23,9 +23,9 @@ class Session
   
   def inspect
    %Q{<td><strong>record id:</strong> #{@id}</td>
-     <td><strong>user:</strong> #{@rec} </td>
-     <td><strong>login time:</strong> #{@created_at.strftime("%d %b %H:%M:%S")}</td>}
-  end
+   <td><strong>user:</strong> #{@rec}</td>
+   <td><strong>login time:</strong> #{@created_at.strftime("%d %b %H:%M:%S")}</td>}
+ end
 end
 
 DataMapper.finalize.auto_upgrade!
